@@ -22,7 +22,10 @@ export async function POST(req: Request) {
     // Construct the full message history
     const fullMessages = [
       { role: 'system', content: MASTER_PROMPT },
-      ...messages,
+      ...messages.map((msg: any) => ({
+        role: ['patient', 'instructor'].includes(msg.role) ? 'assistant' : msg.role,
+        content: msg.content,
+      })),
       { role: 'system', content: SYSTEM_INSTRUCTION },
     ];
 
