@@ -51,7 +51,7 @@ export async function POST(req: Request) {
         // Extract Structured Data via AI
         console.log("Sending to OpenAI...");
         const completion = await openai.chat.completions.create({
-            model: 'gpt-4o', 
+            model: 'gpt-5-mini', // Updated to GPT-5-mini
             messages: [
                 { role: 'system', content: `
 You are a medical data assistant.
@@ -75,6 +75,7 @@ Ensure the JSON is valid.
                 { role: 'user', content: `Here is the document text (truncated if too long):\n\n${rawText.substring(0, 15000)}` } 
             ],
             response_format: { type: "json_object" }
+            // temperature: auto (implicit in GPT-5-mini)
         });
 
         const extractedJson = JSON.parse(completion.choices[0].message.content || '{}');

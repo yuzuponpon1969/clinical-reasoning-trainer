@@ -34,13 +34,14 @@ ${soapData.plan}
     console.log(`[Eval] Starting Pass A (FactCheck) for Case ${caseId}...`);
     const factCheckSystem = getFactCheckSystemPrompt(transcript);
     const factCheckResponse = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-5-mini', // Updated to GPT-5-mini
         messages: [
             { role: 'system', content: factCheckSystem },
             { role: 'user', content: `以下を突き合わせ、SOAPの各文が面接ログで裏付けられるか判定し、JSONで出力してください。\n\n【soap_note】\n${soapText}` }
         ],
         response_format: { type: "json_object" },
-        temperature: 0, // Strict fact checking
+        // temperature: 0, // Removed (auto)
+        max_completion_tokens: 2000,
     });
 
     const factCheckResult: FactCheckResult = JSON.parse(factCheckResponse.choices[0].message.content || '{}');
@@ -50,13 +51,14 @@ ${soapData.plan}
     console.log(`[Eval] Starting Pass B (Scoring)...`);
     const scoringSystem = getScoringSystemPrompt(JSON.stringify(factCheckResult, null, 2));
     const scoringResponse = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-5-mini', // Updated to GPT-5-mini
         messages: [
             { role: 'system', content: scoringSystem },
             { role: 'user', content: `以下のSOAPノートを、事実照合結果に基づいて評価し、JSONで出力してください。\n\n【soap_note】\n${soapText}` }
         ],
         response_format: { type: "json_object" },
-        temperature: 0.3,
+        // temperature: 0.3, // Removed (auto)
+        max_completion_tokens: 3000,
     });
 
     const scoringResult = JSON.parse(scoringResponse.choices[0].message.content || '{}');

@@ -46,7 +46,7 @@ export async function POST(request: Request) {
         const effectiveCategory = category ? category.label : categoryId;
 
         const completion = await openai.chat.completions.create({
-            model: 'gpt-4o',
+            model: 'gpt-5-mini', // Updated to GPT-5-mini
             messages: [
                 { role: 'system', content: `
 You are a medical education AI. 
@@ -86,7 +86,8 @@ Schema:
 
 Ensure the scenario is medically accurate and typical for this presentation.` }
             ],
-            response_format: { type: "json_object" }
+            response_format: { type: "json_object" },
+            max_completion_tokens: 4000
         });
 
         const generatedData = JSON.parse(completion.choices[0].message.content || '{}');

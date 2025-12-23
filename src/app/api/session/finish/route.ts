@@ -19,9 +19,10 @@ export async function POST(req: Request) {
         const prompt = getCoachSystemPrompt(c, transcript, userSummary);
 
         const completion = await openai.chat.completions.create({
-            model: 'gpt-4o',
+            model: 'gpt-5-mini', // Updated to GPT-5-mini
             messages: [{ role: 'system', content: prompt }],
-            response_format: { type: "json_object" }
+            response_format: { type: "json_object" },
+            max_completion_tokens: 3000
         });
 
         const result = completion.choices[0].message.content;
