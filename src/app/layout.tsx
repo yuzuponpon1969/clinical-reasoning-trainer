@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "医療面接トレーナー",
-  description: "AI模擬患者との対話を通じた臨床推論トレーニング",
+  title: "Clinical Reasoning Trainer",
+  description: "Educational simulation for clinical history taking.",
 };
 
 export default function RootLayout({
@@ -16,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={notoSansJP.className}>{children}</body>
+      <body className={cn(inter.className, "min-h-screen bg-slate-50 font-sans antialiased text-slate-900")}>
+        <main className="flex flex-col min-h-screen">
+            {children}
+        </main>
+      </body>
     </html>
   );
 }

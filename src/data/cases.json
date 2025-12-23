@@ -1,0 +1,933 @@
+[
+  {
+    "id": "case_knee_acl_athlete",
+    "title": "サッカー中の膝捻転",
+    "archetypeId": "athlete",
+    "regionId": "knee",
+    "categoryId": "acl",
+    "initialComplaint": "今日の試合中に着地で膝を捻って、バキッといって力が抜けました。",
+    "scenarioContext": "20歳男性、サッカー選手。ジャンプ着地で非接触損傷。膝崩れあり。腫脹著明。Lachman陽性。",
+    "trueDiagnosis": "右膝前十字靭帯損傷 (ACL Injury)",
+    "requiredFindings": [
+      "Injury Mechanism (Non-contact)",
+      "Pop sound",
+      "Swelling timing",
+      "Instability"
+    ]
+  },
+  {
+    "id": "case_knee_osgood_growth",
+    "title": "膝下の痛み（オスグッド）",
+    "archetypeId": "growth",
+    "regionId": "knee",
+    "categoryId": "osgood",
+    "initialComplaint": "最近、バスケットの練習の後に膝のお皿の下あたりがすごく痛いんです。ボコッと出てきている気がして。",
+    "scenarioContext": "13歳男性、バスケットボール部。練習量増加。脛骨粗面の圧痛・隆起。ストレッチ不足。",
+    "trueDiagnosis": "オスグッド・シュラッター病 (Osgood-Schlatter Disease)",
+    "requiredFindings": [
+      "Tibial tuberosity tenderness",
+      "Overuse/Activity increase",
+      "Growth spurt",
+      "Quadriceps tightness"
+    ]
+  },
+  {
+    "id": "case_knee_acl_athlete_1",
+    "title": "膝の前十字靭帯損傷",
+    "archetypeId": "athlete",
+    "regionId": "knee",
+    "categoryId": "acl",
+    "initialComplaint": "膝がガクッとなって、その後ずっと不安定なんです。",
+    "scenarioContext": "Age: 25, Gender: Male, History: Athlete with recent knee twisting injury while playing soccer, Physical Findings: Positive Lachman test, Truth: ACL rupture suspected.",
+    "trueDiagnosis": "Anterior Cruciate Ligament (ACL) Rupture",
+    "requiredFindings": [
+      "Positive Lachman test",
+      "History of twisting injury during sports",
+      "Knee instability",
+      "MRI showing ACL rupture"
+    ]
+  },
+  {
+    "id": "case_knee_acl_athlete_2",
+    "title": "前十字靱帯損傷の症例",
+    "archetypeId": "athlete",
+    "regionId": "knee",
+    "categoryId": "acl",
+    "initialComplaint": "膝が急に崩れるような感じがして、すごい痛みが走ったんです。",
+    "scenarioContext": "Age: 25, Gender: Male, History: Sudden knee collapse during soccer, swelling and pain followed, Physical Findings: Positive Lachman and Anterior Drawer tests, Truth: ACL tear confirmed by MRI.",
+    "trueDiagnosis": "前十字靱帯損傷",
+    "requiredFindings": [
+      "膝の崩れ（膝くずれ）",
+      "急な痛みの発症",
+      "Lachmanテスト陽性",
+      "前方引き出しテスト陽性",
+      "MRIでのACL損傷確認"
+    ]
+  },
+  {
+    "id": "case_knee_acl_athlete_3",
+    "title": "前十字靱帯損傷の臨床ケース",
+    "archetypeId": "athlete",
+    "regionId": "knee",
+    "categoryId": "acl",
+    "initialComplaint": "なんだか膝が不安定で、よく崩れる感じがするんです。",
+    "scenarioContext": "22歳、男性、サッカー中に右膝を負傷。外傷歴あり、膝崩れ及び内反ストレス陽性。身体所見でアンスルテスト陽性、Lachmanテストで前方引き出し感あり。MRIでACL断裂確認。",
+    "trueDiagnosis": "前十字靱帯断裂",
+    "requiredFindings": [
+      "膝崩れ",
+      "外反ストレス検査陽性",
+      "ACL断裂確認（MRI）",
+      "Lachmanテストでの前方引き出し感"
+    ]
+  },
+  {
+    "id": "fracture_child_knee_case_001",
+    "title": "公園で転んだ3歳児",
+    "archetypeId": "child",
+    "regionId": "knee",
+    "categoryId": "fracture",
+    "initialComplaint": "うちの子が公園で転んでしまって、膝が痛いと泣いています。見てもらえますか？",
+    "scenarioContext": "Age: 3歳, Gender: 男児, HPI: 30分前に公園で遊んでいる最中に滑って転倒。地面に左膝をぶつけ、その後歩こうとせず、痛がっている。腫れがあり、痛みが強いようで、ほとんど動かしたがらない。, Physical Findings: 左膝に腫脹と圧痛、可動域の制限あり。膝蓋骨の移動痛も確認。, Vital Signs: T: 37.0°C, HR: 110 bpm, RR: 26/min, BP: 98/62 mmHg, SpO2: 98%",
+    "trueDiagnosis": "左大腿骨顆上骨折",
+    "requiredFindings": [
+      "転倒時に痛みを訴えてから歩こうとしない",
+      "左膝の腫脹と圧痛",
+      "膝蓋骨移動時の痛み",
+      "痛みのため可動域が制限されている"
+    ]
+  },
+  {
+    "id": "gen_child_knee_osgood",
+    "title": "成長期の膝の痛み",
+    "archetypeId": "child",
+    "regionId": "knee",
+    "categoryId": "osgood",
+    "initialComplaint": "この子が最近、膝が痛いって言うんです。特に走った後とか、とても痛がります。",
+    "scenarioContext": "年齢: 10歳, 性別: 男の子, HPI: 数週間前から右膝の痛みを訴える。痛みは運動後に悪化し、安静にすると少し緩和。過去に同様の痛みはなかった。体育の授業で頻繁に運動する。身体的所見: 膝の前面に腫れあり、触診で脛骨粗面に圧痛。著しい熱や発赤はなし。バイタルサイン: 安定。",
+    "trueDiagnosis": "オスグッド・シュラッター病",
+    "requiredFindings": [
+      "運動後に悪化する膝の痛み",
+      "脛骨粗面の圧痛",
+      "10歳の成長期の少年",
+      "頻繁な運動や体育の授業後の症状",
+      "膝前面の限局した腫れ"
+    ]
+  },
+  {
+    "id": "growth_knee_acl_tear_teen",
+    "title": "膝を痛がる15歳のサッカー選手",
+    "archetypeId": "growth_student",
+    "regionId": "knee",
+    "categoryId": "acl",
+    "initialComplaint": "「サッカーの試合中に膝が急に痛くなって、ぐらつく感じがするんです。」",
+    "scenarioContext": "15歳の男性、サッカー部に所属。昨日の試合で、急な方向転換をした際に右膝を痛み、その場で動けなくなった。膝は腫れており、正座も難しい。圧痛は前面に。バイタルサイン正常、他に明らかな外傷はなし。",
+    "trueDiagnosis": "右前十字靭帯損傷",
+    "requiredFindings": [
+      "急な方向転換中に痛みが発生した",
+      "膝に不安定感を感じる",
+      "膝の腫脹と正座困難",
+      "前十字靭帯引っ張り試験で関節不安定感が認められる"
+    ]
+  },
+  {
+    "id": "gen_child_knee_mcl_injury",
+    "title": "サッカー中に膝を痛がる6歳児",
+    "archetypeId": "child",
+    "regionId": "knee",
+    "categoryId": "mcl",
+    "initialComplaint": "6歳の息子がサッカー中に膝を痛がっていて、歩くのが不安定なんです。",
+    "scenarioContext": "6歳の男の子がサッカー中に右膝を捻り、その後歩行が困難になった。痛みを訴えているが、具体的な痛みの位置は曖昧にしか表現できない。膝の内側に腫れがあり、圧痛が認められる。バイタルサインは正常。",
+    "trueDiagnosis": "右膝内側側副靭帯損傷",
+    "requiredFindings": [
+      "サッカー中に右膝を捻った",
+      "膝の内側に腫れと圧痛あり",
+      "歩行が困難",
+      "痛みの位置がはっきりしない",
+      "バイタルサインは正常"
+    ]
+  },
+  {
+    "id": "growth_knee_fracture_teen",
+    "title": "部活中に膝を痛めた15歳の生徒",
+    "archetypeId": "growth_student",
+    "regionId": "knee",
+    "categoryId": "fracture",
+    "initialComplaint": "最近、部活でのランニング中に、膝のあたりが痛くなってきました。",
+    "scenarioContext": "Age: 15, Gender: Male, HPI: The patient is a 15-year-old male who plays on the school soccer team. Recently, he has noticed vague pain around his right knee, particularly after intense training sessions. He recalls a specific incident a week ago where he landed awkwardly after a jump during a match. Swelling appeared the next day. Physical Findings: Mild swelling and tenderness over the tibial tuberosity. Pain reproduced with quadriceps contraction. Vital Signs: Heart rate 76 bpm, Blood pressure 112/70 mmHg, Temperature 36.5°C.",
+    "trueDiagnosis": "脛骨粗面の疲労骨折",
+    "requiredFindings": [
+      "運動後に悪化する膝の痛み",
+      "脛骨粗面の圧痛",
+      "ジャンプ後の着地の際に悪化",
+      "腫れの存在"
+    ]
+  },
+  {
+    "id": "young_adult_shoulder_dislocation",
+    "title": "肩の痛みを訴える19歳学生",
+    "archetypeId": "athlete",
+    "regionId": "shoulder",
+    "categoryId": "shoulder_trauma",
+    "initialComplaint": "肩が急に痛くなったんです。",
+    "scenarioContext": "19歳男性、バスケットボールの試合中に對抗選手とぶつかり、右肩の激痛を訴え来院。腕を動かすことができず、肩が変な位置にあるような感覚がある。視診で右肩の輪郭が崩れ、触診で前方に突出している部位を確認可能。バイタルサインは正常。",
+    "trueDiagnosis": "肩関節脱臼",
+    "requiredFindings": [
+      "バスケットボールの試合中に肩を負傷",
+      "触診で鎖骨の下に凹みを確認",
+      "肩の変形と動作痛あり",
+      "肩が前方に脱臼している感覚"
+    ]
+  },
+  {
+    "id": "elder_shoulder_fall_fracture",
+    "title": "肩が痛くて腕が上がらない",
+    "archetypeId": "elderly",
+    "regionId": "shoulder",
+    "categoryId": "shoulder_trauma",
+    "initialComplaint": "最近肩が痛くて手が全然上がらないんです。何がきっかけだったかちょっと忘れちゃったけど、床に座っていて、ベッドに上がろうとして転んだかもしれないです…。いろいろあってよく憶えていないんですけど、昨日から痛みが悪化していて…。",
+    "scenarioContext": "患者は78歳の女性で、既往歴に骨粗鬆症と2型糖尿病があります。3日前に自宅で床に座ってから立ち上がる際に肩から転倒したようです。現在、右肩の鋭い痛みと可動域制限を訴えています。右肩は腫れており、骨の変形が見られます。バイタルサインは血圧136/78、心拍数85、呼吸数18、体温36.8℃。前方に注意して歩行する際、右肩の可動域が制限され、上げられません。",
+    "trueDiagnosis": "近位上腕骨骨折",
+    "requiredFindings": [
+      "転倒により肩から打撲した既往歴",
+      "右肩の腫脹と変形",
+      "肩の可動域制限",
+      "骨粗鬆症の既往歴"
+    ]
+  },
+  {
+    "id": "gen_young_knee_osgood",
+    "title": "膝の痛みで部活を休む高校生",
+    "archetypeId": "growth_student",
+    "regionId": "knee",
+    "categoryId": "osgood",
+    "initialComplaint": "膝の下が痛くて部活を休んでいます。",
+    "scenarioContext": "年齢: 15歳, 性別: 男性, HPI: 2週間前からサッカーの練習で走ったりジャンプしたりすると右膝の前側が痛くなる。安静にしていると痛みは軽減する。最近、部活の試合が続いていた。, 身体所見: 右膝の膝蓋腱付着部に圧痛、腫れあり。ジャンプや走行で疼痛増強。, バイタルサイン: 体温 36.7°C, 血圧 110/70 mmHg, 脈拍 72 bpm, 呼吸数 16回/分",
+    "trueDiagnosis": "オスグッド・シュラッター病",
+    "requiredFindings": [
+      "サッカーなどの高負荷運動後に膝の前側に痛み",
+      "膝蓋腱付着部に圧痛",
+      "10代半ばの活発な少年",
+      "試合や練習が頻繁であること"
+    ]
+  },
+  {
+    "id": "gen_child_clavicle_fracture",
+    "title": "転んで泣き始めた3歳児",
+    "archetypeId": "child",
+    "regionId": "child_trauma",
+    "categoryId": "clavicle_fx",
+    "initialComplaint": "「公園で遊んでいたら転んで、肩が痛いと言っています。どうしたらいいでしょうか？」",
+    "scenarioContext": "3歳, 男児, 高い遊具から落ちた後右肩の痛みを訴える。ヒストリー：増えてくる痛みで泣き続ける。右肩の腫れと青あざ。Vital Signs: HR 110, RR 22, BP 95/60, T 36.5°C",
+    "trueDiagnosis": "右鎖骨骨折",
+    "requiredFindings": [
+      "転倒または落下のエピソード",
+      "痛がって右肩を動かさない",
+      "右鎖骨部の腫れと圧痛",
+      "肩の範囲外の動きによる痛み",
+      "腫れた部位の青あざ"
+    ]
+  },
+  {
+    "id": "gen_child_ddh_awareness",
+    "title": "股関節の問題に気付いた1歳児",
+    "archetypeId": "child",
+    "regionId": "child_congenital",
+    "categoryId": "ddh",
+    "initialComplaint": "「最近、子供の右側の股関節が不自然に見えるんです」",
+    "scenarioContext": "年齢: 1歳2ヶ月, 性別: 女児, 現病歴: 親は最近子供が歩き出したが、右足を引きずるような動作を観察。股関節の問題があるのではないかと不安になって来院。身体所見: 右脚の内旋制限と脚の長さの差あり。バーロー兆候陽性。Vital Signs: HR 110, RR 24, T 37.2°C。",
+    "trueDiagnosis": "発育性股関節形成不全",
+    "requiredFindings": [
+      "右足の歩行異常",
+      "股関節の内旋制限",
+      "バーロー兆候陽性",
+      "脚の長さの相違の存在"
+    ]
+  },
+  {
+    "id": "case_child_growth_perthes_toddler_limp",
+    "title": "片足をひきずる3歳児",
+    "archetypeId": "child",
+    "regionId": "child_growth",
+    "categoryId": "perthes",
+    "initialComplaint": "最近、息子が足を引きずっています。痛いと言わないのですが、元気がないんです。",
+    "scenarioContext": "Age: 3 years, Gender: Male, HPI: The child has been limping for the past month without a history of trauma. The limp is more pronounced after physical activity, and he seems to tire easily. There is no acute pain reported by the child. Physical Findings: On exam, limited range of motion is noted in the hip, especially in abduction and internal rotation. He walks with a noticeable limp. Vital Signs: Temperature 36.8°C, Heart Rate 90 bpm, Respiratory Rate 20 bpm, Blood Pressure 95/60 mmHg.",
+    "trueDiagnosis": "ペルテス病",
+    "requiredFindings": [
+      "一ヶ月続く跛行",
+      "外傷の既往なし",
+      "股関節の可動域制限",
+      "活動後に跛行の増悪",
+      "痛みを感じないが元気がない"
+    ]
+  },
+  {
+    "id": "gen_elderly_spinal_stenosis",
+    "title": "歩くのがつらくなった老人",
+    "archetypeId": "elderly",
+    "regionId": "elderly_degenerative",
+    "categoryId": "spinal_stenosis",
+    "initialComplaint": "最近、背中が痛くて長い時間歩けないんです。腰も痛いです。それと、何か他にも言おうとしたんですが、また忘れてしまったかもしれません。",
+    "scenarioContext": "Age: 78歳, Gender: 男性, HPI: しばらく前から長時間の歩行や立位で腰痛が出現、痛みが強くなると間欠性跛行が生じる。座位で軽減。 Physical Findings: 下肢にしびれ感があり、特に歩行時に悪化。神経学的検査で下肢筋力低下あり。 Vital Signs: BP 135/80, HR 78, RR 20, SpO2 98%.",
+    "trueDiagnosis": "腰部脊柱管狭窄症",
+    "requiredFindings": [
+      "間欠性跛行の存在",
+      "歩行や立位での腰痛増悪",
+      "座位での症状軽減",
+      "下肢のしびれ感",
+      "神経学的検査での筋力低下"
+    ]
+  },
+  {
+    "id": "gen_athlete_ankle_footballers_injury",
+    "title": "足首痛を訴える22歳のサッカー選手",
+    "archetypeId": "athlete",
+    "regionId": "athlete_ankle",
+    "categoryId": "footballers_ankle",
+    "initialComplaint": "ボールを蹴る時に、足首の前の方が詰まるように痛いんです。最近特にひどくなってきて...",
+    "scenarioContext": "22歳男性、プロサッカー選手。明らかな受傷機転（捻挫など）はなく、繰り返しのキック動作により徐々に右足関節前方の疼痛が増強した。特にインステップキックや、深くしゃがみ込んだ時（強制背屈時）に足首の前方に鋭い痛み（インピンジメント症状）が生じる。過去に何度か足首の捻挫の既往がある。身体所見では足関節前方に骨性隆起を触知し、同部に圧痛あり。",
+    "patientProfile": {
+      "name": "佐藤 健一",
+      "age": "22歳",
+      "gender": "男性",
+      "occupation": "プロサッカー選手",
+      "chiefComplaint": "キック動作時の右足首前面の痛み",
+      "onsetDate": "数ヶ月前から徐々に。2週間前から悪化",
+      "history": "特定のきっかけで捻ったわけではないが、シュート練習の後に痛みが強くなる。足首を深く曲げると（背屈すると）前側がゴリッとして痛い。休むとマシになるが、練習を再開すると痛む。",
+      "painScale": 6,
+      "adlScale": 2,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "フットボーラズアンクル（足関節前方インピンジメント症候群）",
+    "requiredFindings": [
+      "接触プレー中の足首捻挫",
+      "プレー後の腫脹と痛みの増強",
+      "足首の外側に圧痛",
+      "運動時の鋭い疼痛",
+      "休養での症状緩和と運動再開での悪化"
+    ]
+  },
+  {
+    "id": "athlete_hip_groin_strain",
+    "title": "急に痛み始めた19歳のサッカー選手",
+    "archetypeId": "athlete",
+    "regionId": "athlete_hip",
+    "categoryId": "groin_pain",
+    "initialComplaint": "練習中に走ってボールを追いかけている途中に急に股関節が痛くなって、その後プレーを続けられませんでした。怪我の感覚は明確でした。",
+    "scenarioContext": "19歳 男性 サッカー選手 左側の股関節痛 2日前に練習中のスプリントで発症した。触診で鼠径部に圧痛あり。股関節の可動域制限。BT: 36.8°C, HR: 72bpm, BP: 120/80mmHg, RR: 16/min。",
+    "patientProfile": {
+      "name": "藤井 拓也",
+      "age": "19歳",
+      "gender": "男性",
+      "occupation": "大学生（サッカー部）",
+      "chiefComplaint": "左股関節の痛み",
+      "onsetDate": "2日前、練習中",
+      "history": "2日前のサッカー練習中に急にスプリントを始めた際、左股関節に急激な痛みを感じ、その後は走ることができなくなった。以前から軽度の股関節不快感を感じていた。",
+      "painScale": 6,
+      "adlScale": 2,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "鼠径部痛症候群",
+    "requiredFindings": [
+      "スプリント中の急な痛みの発生",
+      "股関節の圧痛",
+      "可動域の制限",
+      "以前からの軽度の不快感",
+      "圧痛部位の局在化"
+    ]
+  },
+  {
+    "id": "growth_student_elbow_baseball",
+    "title": "肘の痛みを訴える高校球児",
+    "archetypeId": "growth_student",
+    "regionId": "growth_elbow",
+    "categoryId": "baseball_elbow",
+    "initialComplaint": "最近、投げるときに右肘が痛むんです。",
+    "scenarioContext": "17歳男性、高校2年生、3週間前から野球のピッチング中に右肘の内側に痛みを感じ始め、痛みが徐々に増している。肘の腫れは軽度で、靭帯部に圧痛あり。生命兆候は正常範囲。",
+    "patientProfile": {
+      "name": "山田太郎",
+      "age": "17歳",
+      "gender": "男性",
+      "occupation": "高校生（野球部）",
+      "chiefComplaint": "右肘の痛み",
+      "onsetDate": "3週間前、ピッチング中",
+      "history": "野球の練習で毎日投球しており、それが原因で徐々に右肘の内側に痛みを感じ始めた。休憩しても痛みが続く。",
+      "painScale": 6,
+      "adlScale": 4,
+      "sportsScale": 7
+    },
+    "trueDiagnosis": "野球肘（内側障害）",
+    "requiredFindings": [
+      "右肘の内側部に圧痛がある",
+      "投球時に痛みが増悪する",
+      "肘の内側側副靱帯（MCL）に損傷の疑い",
+      "スポーツ活動の頻度と関連",
+      "肘の軽度の腫れ"
+    ]
+  },
+  {
+    "id": "gen_worker_neck_pain_syndrome",
+    "title": "慢性的な首と肩の痛みを訴える35歳男性",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_upper",
+    "categoryId": "cervicobrachial",
+    "initialComplaint": "最近、首と肩の痛みがひどく、仕事に集中できません。",
+    "scenarioContext": "35歳男性、2か月前から徐々に増悪する首と肩の痛みを訴えて来院。デスクワークをしており、長時間のPC作業が多い。姿勢不良とストレスが痛みを悪化させる。身体検査では肩の僅かな筋緊張と疼痛、頸部可動域の軽度制限を認める。バイタルサインは正常。",
+    "patientProfile": {
+      "name": "佐藤 健",
+      "age": "35歳",
+      "gender": "男性",
+      "occupation": "会社員（ITエンジニア）",
+      "chiefComplaint": "首と肩の慢性的な痛み",
+      "onsetDate": "2か月前",
+      "history": "長時間のデスクワークが続き、姿勢悪化およびストレスが痛みを悪化。市販薬での改善見られず。痛みはPC作業後に増悪。",
+      "painScale": 6,
+      "adlScale": 4,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "頸肩腕症候群",
+    "requiredFindings": [
+      "デスクワークの頻度と姿勢",
+      "痛みの質と悪化要因",
+      "肩部の筋緊張",
+      "頸部の可動域制限",
+      "ストレスレベル"
+    ]
+  },
+  {
+    "id": "growth_student_lumbar_spondylolysis_case1",
+    "title": "腰の痛みを訴える高校生",
+    "archetypeId": "growth_student",
+    "regionId": "growth_lumbar",
+    "categoryId": "spondylolysis",
+    "initialComplaint": "最近、背中が痛くなることがあるんです。",
+    "scenarioContext": "16歳男性が来院。2週間前から部活動中に腰痛を自覚し、特に後屈動作で増強する。身体検査では、腰椎後屈で痛みが増強。バイタルサインは正常。",
+    "patientProfile": {
+      "name": "鈴木 翔太",
+      "age": "16歳",
+      "gender": "男性",
+      "occupation": "高校生（陸上部）",
+      "chiefComplaint": "腰が痛い",
+      "onsetDate": "2週間前、練習中",
+      "history": "練習中に背中を反らした際に痛みを感じ、その後徐々に悪化。痛みは特にランニング中や後に悪化。",
+      "painScale": 5,
+      "adlScale": 2,
+      "sportsScale": 6
+    },
+    "trueDiagnosis": "腰椎分離症",
+    "requiredFindings": [
+      "部活動中に発生した痛み",
+      "腰椎後屈で痛み増強",
+      "物理的な活動で痛みが悪化",
+      "過去のスポーツによる背中のストレス",
+      "画像診断での異常所見"
+    ]
+  },
+  {
+    "id": "worker_upper_elbow_ucl",
+    "title": "指先のしびれに悩むIT技術者",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_upper",
+    "categoryId": "cubital_tunnel",
+    "initialComplaint": "「最近、両手の指先がしびれていて、キーボードを打つのが辛いんです。終電ギリギリまで仕事しているので、どうにかして仕事を続けたいんですが…。」",
+    "scenarioContext": "34歳男性。1か月前から両手の小指と薬指にしびれを感じるようになり、特に長時間のパソコン作業後に悪化する。物を掴む力が弱まる感覚もあり、職務に支障をきたしている。頸部や肩の痛みはない。身体診察では、肘部管部位でのTinel徴候が陽性。血圧120/80、脈拍72、正常体温。",
+    "patientProfile": {
+      "name": "山田 太郎",
+      "age": "34歳",
+      "gender": "男性",
+      "occupation": "IT技術者",
+      "chiefComplaint": "両手の指先のしびれ",
+      "onsetDate": "1か月前から",
+      "history": "最近、プロジェクトの納期が迫っており、毎日12時間以上デスクワークをしている。初めて症状を感じたのは1か月前で、最初は軽微だったが、現在では仕事に支障をきたすほど。",
+      "painScale": 3,
+      "adlScale": 5,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "肘部管症候群",
+    "requiredFindings": [
+      "小指と薬指のしびれ",
+      "長時間のパソコン作業後に悪化",
+      "Tinel徴候陽性",
+      "物を掴む力の低下"
+    ]
+  },
+  {
+    "id": "growth_student_ankle_sever",
+    "title": "足の痛みを訴える16歳のサッカー選手",
+    "archetypeId": "growth_student",
+    "regionId": "growth_ankle",
+    "categoryId": "sever",
+    "initialComplaint": "最近、サッカーの練習中にかかとが痛いんです。",
+    "scenarioContext": "16歳男性、高校生、サッカー部所属。数週間前から右かかとの痛みを訴える。運動後に悪化し、特に走ったりジャンプする際に顕著。腫れや発赤なし。安静時は痛みが緩和される。バイタルサイン正常。",
+    "patientProfile": {
+      "name": "山田 太郎",
+      "age": "16歳",
+      "gender": "男性",
+      "occupation": "高校生（サッカー部）",
+      "chiefComplaint": "右かかとの痛み",
+      "onsetDate": "2週間前、練習中",
+      "history": "練習中のランニングやジャンプ後に痛みを感じ始める。ケガの履歴なし。休むと改善。",
+      "painScale": 6,
+      "adlScale": 3,
+      "sportsScale": 7
+    },
+    "trueDiagnosis": "シーバー病（踵骨骨端症）",
+    "requiredFindings": [
+      "ランニングやジャンプでの痛み悪化",
+      "足底の伸展時に圧痛",
+      "練習後の痛み増強"
+    ]
+  },
+  {
+    "id": "gen_athlete_shoulder_impingement",
+    "title": "試合中に肩を負傷した22歳の選手",
+    "archetypeId": "athlete",
+    "regionId": "athlete_shoulder",
+    "categoryId": "impingement",
+    "initialComplaint": "「昨日の試合でシュートを打った瞬間に右肩に鋭い痛みが走りました。次の試合に間に合うようにすぐ治したいです。」",
+    "scenarioContext": "22歳の男性が試合中、右肩に鋭い痛みを感じた。肩の上部と前部に圧痛があり、特に肩を上げるときに痛みを感じる。過去1ヶ月間、チームのレギュラーシーズンで頻繁な試合と練習を行っていた。バイタルサインは正常範囲内。",
+    "patientProfile": {
+      "name": "佐藤 健",
+      "age": "22歳",
+      "gender": "男性",
+      "occupation": "大学生（バレーボール部）",
+      "chiefComplaint": "右肩の痛み",
+      "onsetDate": "昨日、試合中",
+      "history": "試合中にスパイクを打った際に右肩に鋭い痛みを感じた。試合が続く中、痛みが増強。日常生活には支障がないが、試合や練習でのプレーに大きく影響している。",
+      "painScale": 7,
+      "adlScale": 2,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "肩のインピンジメント症候群",
+    "requiredFindings": [
+      "試合中にスパイクを打つ際の受傷",
+      "右肩上部と前部の圧痛",
+      "肩を上げる際の痛みの増強",
+      "過去1ヶ月間の頻繁な試合と練習",
+      "特にアームの挙上時の痛み"
+    ]
+  },
+  {
+    "id": "gen_worker_adult_tos_scenario",
+    "title": "右肩と手のしびれに悩む35歳会社員",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_upper",
+    "categoryId": "tos",
+    "initialComplaint": "最近、右肩から手にかけて痺れがあり、デスクワークがつらくて困っています。休む訳にはいかないので早く治したいです。",
+    "scenarioContext": "Age: 35歳, Gender: 男性, HPI: 数ヶ月前から右肩と手のしびれが徐々に増加。特に長時間のデスクワークや腕を上げた際に悪化する。, Physical Findings: 右肩に軽度の可動域制限と圧痛, Vital Signs: 正常",
+    "patientProfile": {
+      "name": "佐藤健一",
+      "age": "35歳",
+      "gender": "男性",
+      "occupation": "会社員",
+      "chiefComplaint": "右肩から手にかけてのしびれと痛み",
+      "onsetDate": "3ヶ月前",
+      "history": "3ヶ月前から右肩から手にかけてのしびれが徐々に悪化。デスクワーク時に特に酷くなる。腕を上げると症状が増す。痛みは夜間に悪化することも。",
+      "painScale": 5,
+      "adlScale": 4,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "胸郭出口症候群",
+    "requiredFindings": [
+      "デスクワーク中の症状増悪",
+      "右腕を上げたときの症状悪化",
+      "右肩の軽度の圧痛",
+      "夜間の痛みの増加"
+    ]
+  },
+  {
+    "id": "gen_worker_adult_lumbar_herniated_disk",
+    "title": "腰の痛みで仕事が手につかない",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_lumbar",
+    "categoryId": "hernia",
+    "initialComplaint": "最近、腰の痛みが酷くて仕事に集中できなくて困っています。休むと給料が減ってしまうので、何とか早く治したいのですが。",
+    "scenarioContext": "35歳, 男性, 2週間前から腰痛が増悪。力仕事をする中で重い箱を持ち上げた際に痛み発生。腰部の痛みあり、下肢痛は右側優位にあり。咳やくしゃみで悪化。神経学的評価で右SLR（Straight Leg Raise）テスト陽性。バイタル: BP 120/80, HR 78, Temp 36.5℃.",
+    "patientProfile": {
+      "name": "山田 太郎",
+      "age": "35歳",
+      "gender": "男性",
+      "occupation": "配送業",
+      "chiefComplaint": "腰の痛みが強く仕事が難しい",
+      "onsetDate": "2週間前、重い箱を持ち上げた時",
+      "history": "2週間前に重い箱を持ち上げた際に腰に強い痛みを感じ、それ以来痛みが持続している。右脚に時々痛みとしびれを感じる。",
+      "painScale": 7,
+      "adlScale": 6,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "椎間板ヘルニア",
+    "requiredFindings": [
+      "重い荷物を持ち上げた際の腰痛発症",
+      "右下肢に放散する痛み・しびれ",
+      "咳、くしゃみで痛みが増す",
+      "右SLRテスト陽性"
+    ]
+  },
+  {
+    "id": "gen_child_growth_scfe",
+    "title": "足を引きずる12歳の男の子",
+    "archetypeId": "child",
+    "regionId": "child_growth",
+    "categoryId": "scfe",
+    "initialComplaint": "「息子が最近、足を引きずるような歩き方をするんです。」",
+    "scenarioContext": "Age: 12歳, Gender: 男性, HPI: 3週間前から右足に違和感を訴え、現在歩行時に足を引きずる様子が見られる。階段の上り下りが特に辛い。Physical Findings: 右の大腿が内回旋制限, Vital Signs: 正常。",
+    "patientProfile": {
+      "name": "田中 太郎",
+      "age": "12歳",
+      "gender": "男性",
+      "occupation": "小学6年生（サッカー部）",
+      "chiefComplaint": "右足の痛み、歩行困難",
+      "onsetDate": "3週間前、特に怪我や事件はなし",
+      "history": "徐々に右股関節の痛みを訴えるようになり、次第に足を引きずるようになった。段々と症状が悪化している。座っていると痛みは和らぐが、歩行で痛みが増強する。",
+      "painScale": 5,
+      "adlScale": 4,
+      "sportsScale": 7
+    },
+    "trueDiagnosis": "大腿骨頭すべり症 (SCFE)",
+    "requiredFindings": [
+      "右大腿の内回旋制限を認める",
+      "歩行時の痛みの悪化",
+      "成長期の小児に多いことを確認",
+      "右股関節のレントゲンでの異常所見"
+    ]
+  },
+  {
+    "id": "worker_elbow_tennis_condition",
+    "title": "突然の肘痛で仕事が心配",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_upper",
+    "categoryId": "tennis_elbow",
+    "initialComplaint": "最近右肘が痛くて、仕事に支障が出ています。どうしたら早く治るでしょうか？",
+    "scenarioContext": "35歳男性。右手を多用する出荷作業員。3週間前から右肘の痛みが増し、物を持ち上げる際に悪化。身体検査で外側上顆の圧痛確認、肘伸展時痛み。バイタルは正常範囲。",
+    "patientProfile": {
+      "name": "田中健",
+      "age": "35歳",
+      "gender": "男性",
+      "occupation": "出荷作業員",
+      "chiefComplaint": "右肘が痛い",
+      "onsetDate": "3週間前から徐々に悪化",
+      "history": "重い箱を右手で頻繁に持ち上げる際、徐々に肘の外側に痛みを感じるようになった。",
+      "painScale": 6,
+      "adlScale": 4,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "上腕骨外側上顆炎（テニス肘）",
+    "requiredFindings": [
+      "痛みが右肘の外側に集中している",
+      "反復的な腕の使用",
+      "肘外側上顆の圧痛",
+      "特定の動作（物を持ち上げる）での痛みの増悪"
+    ]
+  },
+  {
+    "id": "gen_elderly_femoral_neck_fx",
+    "title": "転倒した83歳女性",
+    "archetypeId": "elderly",
+    "regionId": "elderly_trauma",
+    "categoryId": "femoral_neck_fx",
+    "initialComplaint": "「昨日、家の中で転んでしまって、それから足がすごく痛くて歩けなくなったんです。」",
+    "scenarioContext": "83歳、女性。昨日自宅で転倒した後、右臀部と大腿部の痛みを感じ、動けなくなった。既往歴として骨粗鬆症があり、最近物忘れが多くなっている。身体診察では右足は短縮し外旋位。バイタルサイン: 血圧130/85mmHg, 心拍数85拍/分, 体温36.6℃。",
+    "patientProfile": {
+      "name": "佐藤 初子",
+      "age": "83歳",
+      "gender": "女性",
+      "occupation": "退職者",
+      "chiefComplaint": "右足の強い痛みと歩行不能",
+      "onsetDate": "昨日、家の中で転倒",
+      "history": "夜中にトイレに行こうとして足を滑らせ転倒、右臀部を強打。痛みのため起き上がれず、家族が発見し、その後救急搬送。",
+      "painScale": 9,
+      "adlScale": 8,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "右大腿骨頸部骨折",
+    "requiredFindings": [
+      "高齢女性の骨粗鬆症既往",
+      "転倒による大腿部と臀部の痛み",
+      "右足の短縮と外旋位",
+      "歩行不能"
+    ]
+  },
+  {
+    "id": "gen_schoolage_ankle_sprain_scenario",
+    "title": "激しい練習後に足首が痛む17歳",
+    "archetypeId": "growth_student",
+    "regionId": "growth_ankle",
+    "categoryId": "ankle_sprain",
+    "initialComplaint": "部活の後から足首がすごく痛くて、歩くのがつらいです。",
+    "scenarioContext": "Age: 17歳, Gender: 男性, HPI: 3日前、サッカーの試合の途中で相手選手と接触し足首を捻った。腫れと痛みが出現、その後、アイシングと安静で少し良くなったがまだ痛みが続く。痛みはズキズキしている。Physical Findings: 足関節の腫れ、圧痛、可動域制限、内反ストレスで痛み増強, Vital Signs: 正常",
+    "patientProfile": {
+      "name": "佐藤 耕太",
+      "age": "17歳",
+      "gender": "男性",
+      "occupation": "高校生（サッカー部）",
+      "chiefComplaint": "右足首が痛い",
+      "onsetDate": "3日前、サッカーの試合中",
+      "history": "試合中にジャンプした際、相手選手の足に乗り、右足首を大きく捻った。その直後に強い痛みと腫れを感じたため、すぐにプレーを中断した。家に帰ってからアイシングし、足を高くして休んだ。この2日間、歩く際に痛みが強まり、安静時にも鈍痛あり。",
+      "painScale": 6,
+      "adlScale": 4,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "右足関節外側靭帯損傷（捻挫）",
+    "requiredFindings": [
+      "サッカー中のバランス崩しによる足首の内返し",
+      "足関節外側の腫れと圧痛",
+      "内反ストレステストによる痛み増強",
+      "アイシングと安静で少し改善"
+    ]
+  },
+  {
+    "id": "worker_lumbar_backstrain",
+    "title": "ぎっくり腰の作業員",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_lumbar",
+    "categoryId": "lbp",
+    "initialComplaint": "「腰が痛くて、仕事ができないと困るんです。」",
+    "scenarioContext": "42歳の男性、工場労働者。2日前に重い箱を持ち上げようとして急に腰に痛みを感じた。痛みは初めより少し和らいだが、まだ立ったり座ったりする時に激痛を感じる。体温: 36.8°C、血圧: 128/82 mmHg、脈拍: 78/分。",
+    "patientProfile": {
+      "name": "佐藤 太郎",
+      "age": "42歳",
+      "gender": "男性",
+      "occupation": "工場労働者",
+      "chiefComplaint": "腰の痛み",
+      "onsetDate": "2日前、作業中に重い物を持ち上げた時",
+      "history": "痛みは突然のもので、翌日に少し良くなったが、まだ酷い痛みが続いている。特に前かがみになると強く感じる。",
+      "painScale": 8,
+      "adlScale": 6,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "急性腰部捻挫（ぎっくり腰）",
+    "requiredFindings": [
+      "重い物を持ち上げた直後に痛みが始まった",
+      "痛みは体を前に曲げたり立とうとする動作で悪化する",
+      "筋肉の過緊張が触診で確認される",
+      "下肢への放散痛や麻痺は無し"
+    ]
+  },
+  {
+    "id": "gen_child_congenital_torticollis",
+    "title": "首が傾いている赤ちゃん",
+    "archetypeId": "child",
+    "regionId": "child_congenital",
+    "categoryId": "torticollis",
+    "initialComplaint": "「赤ちゃんの首がいつも同じ方向を向いています。心配です。」",
+    "scenarioContext": "Age: 3 months, Gender: Female, HPI: Parent noticed infant's head consistently tilting to the left for the past month. No pain or distress is observed. Physical Findings: Limited range of motion in the neck, preference for turning to the left. Vital Signs: Normal for age.",
+    "patientProfile": {
+      "name": "加藤 菜々",
+      "age": "3ヶ月",
+      "gender": "女性",
+      "occupation": "乳児",
+      "chiefComplaint": "首が左に傾いている",
+      "onsetDate": "1ヶ月前",
+      "history": "生後2ヶ月頃から左を向いたまま首を回すことを嫌がる様子。特に痛がる様子はないが、抱っこしても常に首が左に傾いている。",
+      "painScale": 0,
+      "adlScale": 2,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "筋性斜頸",
+    "requiredFindings": [
+      "首の傾きが生後2ヶ月から始まった",
+      "首の回旋制限があるが痛みはない",
+      "常に左を向いていることを好む",
+      "姿勢に問題があるが神経学的異常なし"
+    ]
+  },
+  {
+    "id": "athlete_knee_meniscus_tear",
+    "title": "バスケットボールの試合で膝を負傷した学生",
+    "archetypeId": "athlete",
+    "regionId": "athlete_knee",
+    "categoryId": "meniscus",
+    "initialComplaint": "右膝に強い痛みを感じているんです。試合中に怪我をしました。早く戻りたいです。",
+    "scenarioContext": "21歳男性、大学生（バスケットボール部）。3日前、試合中にジャンプから着地した際に右膝に鋭い痛みを感じた。その後、膝が腫れ、動きに制限を感じるようになった。Vital Signsは安定しているが、歩行時に痛みを訴える。",
+    "patientProfile": {
+      "name": "伊藤 太郎",
+      "age": "21歳",
+      "gender": "男性",
+      "occupation": "大学生（バスケットボール部）",
+      "chiefComplaint": "右膝が痛い",
+      "onsetDate": "3日前、試合中",
+      "history": "試合中にジャンプして着地した時に異音と激しい痛みがあり、その後直ちに腫れ始めた。歩行困難。試合後すぐに氷で冷やしていたが、腫れは引かない。",
+      "painScale": 7,
+      "adlScale": 4,
+      "sportsScale": 9
+    },
+    "trueDiagnosis": "右膝の半月板損傷",
+    "requiredFindings": [
+      "ジャンプ後の着地時に痛みが発生",
+      "膝の腫脹と可動域制限",
+      "膝を曲げるとクリック音がする",
+      "McMurrayテスト陽性",
+      "歩行時の痛み"
+    ]
+  },
+  {
+    "id": "gen_athlete_knee_acl_injury",
+    "title": "バスケットボール中の急な膝の痛み",
+    "archetypeId": "athlete",
+    "regionId": "athlete_knee",
+    "categoryId": "acl",
+    "initialComplaint": "試合中に急に膝がねじれた瞬間、音がしてそれ以来右膝が痛いです。",
+    "scenarioContext": "21歳、男性、バスケットボール選手。試合中に急停止から方向転換をした際に右膝が内側に崩れ、ラッチ音が発生、その後すぐに痛みと腫れが生じた。体温36.8℃、心拍80回/分、血圧120/80mmHg。",
+    "patientProfile": {
+      "name": "田中 太郎",
+      "age": "21歳",
+      "gender": "男性",
+      "occupation": "大学生（バスケットボール部）",
+      "chiefComplaint": "右膝が痛い",
+      "onsetDate": "2日前、試合中",
+      "history": "試合中に急に方向を変えた際に膝の内側に力がかかり、ねじれるような形で損傷。直後に音を聞いた。腫れがあり、現在、重量負荷時に痛みを感じる。",
+      "painScale": 7,
+      "adlScale": 3,
+      "sportsScale": 9
+    },
+    "trueDiagnosis": "前十字靭帯損傷",
+    "requiredFindings": [
+      "急停止と方向転換で発生した受傷メカニズム",
+      "膝の腫脹",
+      "ラッチングの音",
+      "体重をかけたときの強い痛み",
+      "膝の不安定感"
+    ]
+  },
+  {
+    "id": "gen_athlete_knee_patellar_tendinitis",
+    "title": "膝に痛みを訴える陸上選手",
+    "archetypeId": "athlete",
+    "regionId": "athlete_knee",
+    "categoryId": "patellar_tendinitis",
+    "initialComplaint": "走っている最中に突然右膝の痛みが強くなったんです。でも、今週末の試合にどうしても出たいんです。",
+    "scenarioContext": "Age: 19歳, Gender: 女性, HPI: 1週間前のスプリント練習中に右膝に痛みを感じ始め、徐々に悪化。過去数ヶ月間、徐々に頻度と強度が増している。Physical Findings: 膝蓋腱部分に圧痛、軽度の腫れ。Vital Signs: 血圧120/80 mmHg, 脈拍72拍/分, 体温36.6℃",
+    "patientProfile": {
+      "name": "佐藤 薫",
+      "age": "19歳",
+      "gender": "女性",
+      "occupation": "大学生（陸上競技部）",
+      "chiefComplaint": "右膝が痛い",
+      "onsetDate": "1週間前、スプリント練習中",
+      "history": "数ヶ月にわたり、練習量が増加。スプリント中に急に右膝蓋骨の下に痛み。以前は練習後に痛みが軽減したが、最近は持続的に痛む。現在、階段を上がるときやジャンプの着地時にも痛む。",
+      "painScale": 6,
+      "adlScale": 4,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "膝蓋腱炎",
+    "requiredFindings": [
+      "スプリント中の痛み発生",
+      "過去数ヶ月の練習量増加",
+      "膝蓋腱の圧痛と軽度の腫れ",
+      "階段昇降やジャンプ時の痛み"
+    ]
+  },
+  {
+    "id": "athlete_ankle_lateral_ligament_injury_001",
+    "title": "試合中に足首を痛めた19歳バスケ選手",
+    "archetypeId": "athlete",
+    "regionId": "athlete_ankle",
+    "categoryId": "lateral_ligament",
+    "initialComplaint": "試合中、ジャンプして着地した瞬間に足首がぐきっとなって、それ以来痛いです。早く治して試合に戻りたいです。",
+    "scenarioContext": "19歳男性、左足首捻挫。バスケットボール試合中にジャンプ後の着地で内反捻挫を受傷。腫れと痛み、体重負荷時に増悪。身体所見：左足関節外側に腫脹、圧痛あり、足関節前方引き込み検査で陽性。脈拍72、血圧118/82、体温36.6℃。",
+    "patientProfile": {
+      "name": "田中 翔太",
+      "age": "19歳",
+      "gender": "男性",
+      "occupation": "大学生（バスケットボール部）",
+      "chiefComplaint": "左足首が痛い",
+      "onsetDate": "3日前、試合中",
+      "history": "バスケットボールの試合中にジャンプして着地した際、左足が内反して捻挫。当初は痛みが強く、歩行困難。次の日から腫れと青あざが出現。",
+      "painScale": 6,
+      "adlScale": 4,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "左足関節外側靱帯損傷（外側靱帯捻挫）",
+    "requiredFindings": [
+      "試合中の内反捻挫の機序",
+      "左足関節外側の圧痛",
+      "腫脹と青あざの出現",
+      "足関節前方引き込み検査の陽性"
+    ]
+  },
+  {
+    "id": "gen_child_elbow_pulled",
+    "title": "突然泣き出した2歳児",
+    "archetypeId": "child",
+    "regionId": "child_trauma",
+    "categoryId": "pulled_elbow",
+    "initialComplaint": "「今朝、うちの子が急に泣き出して、腕を全然動かそうとしません。」",
+    "scenarioContext": "2歳, 男性, 左腕を痛がる, 腕を曲げようとすると泣き出す, 生命兆候は安定している",
+    "patientProfile": {
+      "name": "太田 翔太",
+      "age": "2歳",
+      "gender": "男性",
+      "occupation": "なし",
+      "chiefComplaint": "左腕を動かさない",
+      "onsetDate": "今朝、公園からの帰宅中",
+      "history": "母親が手を引くとき、突然走り出そうとして引っ張られた。その後から泣き始め、左腕を動かさない。",
+      "painScale": 4,
+      "adlScale": 6,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "肘内障",
+    "requiredFindings": [
+      "腕を動かそうとすると泣く",
+      "母親が手を引っ張ったときに腕が抜けた感じ",
+      "左手をだらんと垂らしている",
+      "子供が腕を守るようにしている"
+    ]
+  },
+  {
+    "id": "gen_athlete_shoulder_rotator_cuff",
+    "title": "競技復帰を目指す20歳の選手",
+    "archetypeId": "athlete",
+    "regionId": "athlete_shoulder",
+    "categoryId": "rotator_cuff",
+    "initialComplaint": "右肩が痛くてサーブができません。",
+    "scenarioContext": "20歳の男性、テニス選手、試合中のスマッシュで肩を捻じった。頑固な肩の痛みが継続し、次の試合に向けて早期復帰を希望。身体診察でのクリークサイン陽性。バイタルサインは正常範囲。",
+    "patientProfile": {
+      "name": "佐藤健太",
+      "age": "20歳",
+      "gender": "男性",
+      "occupation": "大学生（テニス部）",
+      "chiefComplaint": "右肩の痛み",
+      "onsetDate": "3日前、試合中",
+      "history": "試合中、スマッシュ時に右肩を捻じり鋭い痛みが生じた。疼痛が悪化し、肩を動かすと痛みが出る。安静時は軽減する。",
+      "painScale": 7,
+      "adlScale": 3,
+      "sportsScale": 8
+    },
+    "trueDiagnosis": "右肩腱板損傷",
+    "requiredFindings": [
+      "試合中スマッシュで肩を捻じった",
+      "痛みが肩の外側に集中",
+      "クリークサイン陽性",
+      "肩を動かすと痛みの増悪",
+      "肩の外転時に制限"
+    ]
+  },
+  {
+    "id": "worker_adult_upper_carpal_tunnel",
+    "title": "悪化した腕のしびれで心配",
+    "archetypeId": "worker_adult",
+    "regionId": "worker_upper",
+    "categoryId": "cts",
+    "initialComplaint": "「手のしびれがひどくなってきて、仕事に影響が出ているんです。病気休暇が心配です。」",
+    "scenarioContext": "34歳男性、コンピュータープログラマー。ここ数ヶ月、手根管症候群の症状が徐々に悪化。最近は特に右手でしびれと痛みが強く、仕事中に影響が出ている。夜間痛で睡眠障害もあり。所見: 右手首の圧痛、Tinel徴候陽性、Phalenテスト陽性。バイタルサインは正常。",
+    "patientProfile": {
+      "name": "高橋和夫",
+      "age": "34歳",
+      "gender": "男性",
+      "occupation": "コンピュータープログラマー",
+      "chiefComplaint": "右手のしびれと痛み",
+      "onsetDate": "数ヶ月前から徐々に",
+      "history": "長時間のパソコン作業で悪化。夜間に腕のしびれが増し、睡眠が妨げられている。利き手の右手に症状が強い。",
+      "painScale": 6,
+      "adlScale": 5,
+      "sportsScale": 0
+    },
+    "trueDiagnosis": "手根管症候群",
+    "requiredFindings": [
+      "長時間のパソコン作業が原因",
+      "右手のしびれと痛み",
+      "Tinel徴候陽性",
+      "Phalenテスト陽性",
+      "夜間に悪化する症状"
+    ]
+  }
+]
