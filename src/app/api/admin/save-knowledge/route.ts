@@ -1,15 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
 import pdf from 'pdf-parse';
+import { supabase } from '@/lib/supabase';
 
 export const config = {
   api: {
     bodyParser: false,
   },
 };
-
-const KNOWLEDGE_FILE = path.join(process.cwd(), 'src/data/knowledge.json');
 
 export async function POST(req: NextRequest) {
   try {
@@ -33,37 +30,25 @@ export async function POST(req: NextRequest) {
     // Parse PDF
     const data = await pdf(buffer);
     const text = data.text;
-
-    // Define storage path: public/data/knowledge/{archetype}/{region}/{category}/
-    const targetDir = path.join(process.cwd(), 'public', 'data', 'knowledge', archetypeId, regionId, categoryId);
-    await fs.mkdir(targetDir, { recursive: true });
-
-    // Save File
-    // We save two things: The original PDF (for reference) and the parsed text (for RAG)
-    // Actually for RAG we might just want to save a JSON or Text file. 
-    // Let's save the original PDF and a companion JSON file with metadata + extracted text.
-    
     const fileName = file.name;
-    const baseName = path.parse(fileName).name;
-    const jsonFileName = `${baseName}.json`;
+    const baseName = fileName.replace(/\.pdf$/i, '');
 
-    const pdfPath = path.join(targetDir, fileName);
-    const jsonPath = path.join(targetDir, jsonFileName);
+    // Upsert to DB
+    const { error } = await supabase
+        .from('knowledge_items')
+        .upsert({
+            id: crypto.randomUUID(),
+            title: baseName,
+            content: text,
+            archetype_id: archetypeId,
+            region_id: regionId,
+            category_id: categoryId,
+            content_length: text.length
+        });
+    
+    if (error) throw error;
 
-    await fs.writeFile(pdfPath, buffer);
-
-    const knowledgeEntry = {
-        id: crypto.randomUUID(),
-        title: baseName,
-        fileName: fileName,
-        content: text,
-        uploadedAt: new Date().toISOString(),
-        metadata: { archetypeId, regionId, categoryId }
-    };
-
-    await fs.writeFile(jsonPath, JSON.stringify(knowledgeEntry, null, 2));
-
-    return NextResponse.json({ success: true, entry: knowledgeEntry });
+    return NextResponse.json({ success: true, title: baseName });
 
   } catch (e: any) {
     console.error(e);
@@ -72,42 +57,27 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
-    // Recursive function to scan directories
-    const rootDir = path.join(process.cwd(), 'public', 'data', 'knowledge');
-    
-    async function getFiles(dir: string): Promise<any[]> {
-        let results: any[] = [];
-        try {
-            const list = await fs.readdir(dir, { withFileTypes: true });
-            for (const dirent of list) {
-                const res = path.resolve(dir, dirent.name);
-                if (dirent.isDirectory()) {
-                    results = results.concat(await getFiles(res));
-                } else {
-                    if (res.endsWith('.json')) {
-                        const content = await fs.readFile(res, 'utf-8');
-                        try {
-                            const json = JSON.parse(content);
-                            // Return lightweight version
-                            results.push({
-                                id: json.id,
-                                title: json.title,
-                                uploadedAt: json.uploadedAt,
-                                contentLength: json.content?.length || 0,
-                                metadata: json.metadata || {}
-                            });
-                        } catch (e) {
-                            // ignore bad json
-                        }
-                    }
-                }
-            }
-        } catch (e) {
-            // dir might not exist yet
-        }
-        return results;
+    const { data, error } = await supabase
+        .from('knowledge_items')
+        .select('id, title, created_at, content_length, archetype_id, region_id, category_id')
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        return NextResponse.json([], { status: 500 });
     }
 
-    const allItems = await getFiles(rootDir);
-    return NextResponse.json(allItems);
+    // Map to frontend expected format
+    const items = data.map(item => ({
+        id: item.id,
+        title: item.title,
+        uploadedAt: item.created_at,
+        contentLength: item.content_length,
+        metadata: {
+            archetypeId: item.archetype_id,
+            regionId: item.region_id,
+            categoryId: item.category_id
+        }
+    }));
+
+    return NextResponse.json(items);
 }

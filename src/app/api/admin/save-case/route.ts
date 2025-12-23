@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
 import { Case } from '@/lib/data';
+import { supabase } from '@/lib/supabase';
 
 export async function POST(req: Request) {
     try {
@@ -13,30 +12,27 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Invalid case data' }, { status: 400 });
         }
 
-        // Determine Category Directory
-        // Use hierarchy provided by UI override, or fallback to internal data
+        // Determine Category Hierarchy for metadata columns
         const archetypeId = (body.archetypeId || newCase.archetypeId || 'unknown_archetype');
         const regionId = (body.regionId || newCase.regionId || 'unknown_region');
         const categoryId = (body.categoryId || newCase.categoryId || 'uncategorized');
 
-        const targetDir = path.join(process.cwd(), 'public', 'data', 'cases', archetypeId, regionId, categoryId);
-        await fs.mkdir(targetDir, { recursive: true });
+        // Upsert to DB
+        // We store the full object in 'content', but also extract key metadata to columns for filtering
+        const { error } = await supabase
+            .from('cases')
+            .upsert({
+                id: newCase.id,
+                title: newCase.title,
+                archetype_id: archetypeId,
+                region_id: regionId,
+                category_id: categoryId,
+                content: newCase // JSONB column
+            });
 
-        // Generate Filename
-        // We use the ID as the filename to ensure uniqueness within the folder
-        const fileName = `${newCase.id}.json`;
-        const filePath = path.join(targetDir, fileName);
-        
-        // Check for duplicates in this specific folder
-        // If file exists, we might overwrite or error. 
-        // The user requirement says "Import Case... separate folders".
-        // Let's safe-guard against accidental overwrite by appending timestamp if exists, 
-        // or just overwrite if that's the intention. 
-        // Given "Import" often implies adding new, let's just overwrite for now as it's easier to correct mistakes.
-        
-        await fs.writeFile(filePath, JSON.stringify(newCase, null, 2), 'utf-8');
+        if (error) throw error;
 
-        return NextResponse.json({ success: true, path: `/data/cases/${categoryId}/${fileName}` });
+        return NextResponse.json({ success: true, id: newCase.id });
 
     } catch (error: any) {
         console.error("Error saving case:", error);

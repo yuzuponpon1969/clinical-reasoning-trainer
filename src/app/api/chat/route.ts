@@ -31,48 +31,24 @@ export async function POST(req: Request) {
     // RAG Retrieval Logic
     let knowledgeContext = "";
     try {
-        const fs = require('fs').promises;
-        const path = require('path');
+        const { supabase } = require('@/lib/supabase');
         
-        // Construct path: public/data/knowledge/{archetype}/{region}/{category}
-        // We use the case's metadata to find the specific folder.
-        // Falls back to empty string if any part is missing, but should be present for valid cases.
-        const knowledgeDir = path.join(
-            process.cwd(), 
-            'public/data/knowledge', 
-            c.archetypeId || '', 
-            c.regionId || '', 
-            c.categoryId || ''
-        );
+        // Query Knowledge Items matching hierarchy
+        // In a real system we'd use vector search, but here we use exact metadata matching
+        // which matches the user's "Knowledge Base" organization strategy.
+        const { data: relevantDocs, error } = await supabase
+            .from('knowledge_items')
+            .select('title, content')
+            .match({
+                archetype_id: c.archetypeId || '',
+                region_id: c.regionId || '',
+                category_id: c.categoryId || ''
+            })
+            .limit(3); 
 
-        let relevantDocs: any[] = [];
-        
-        // Check if directory exists
-        try {
-            await fs.access(knowledgeDir);
-            const files = await fs.readdir(knowledgeDir);
-            
-            // Read all JSON files in this specific category folder
-            // In a real system, we might limit this or use vector search.
-            // Here we load all documents in the folder as "High Relevance"
-            for (const file of files) {
-                if (file.endsWith('.json')) {
-                    const content = await fs.readFile(path.join(knowledgeDir, file), 'utf-8');
-                    try {
-                        const doc = JSON.parse(content);
-                        relevantDocs.push(doc);
-                    } catch(e) {}
-                }
-            }
-        } catch (e) {
-            // Folder doesn't exist, which is fine
-        }
-
-        if (relevantDocs.length > 0) {
-            // Take top docs. If too many, maybe limit.
-            // For now, let's take up to 3.
-            const contextText = relevantDocs.slice(0, 3).map((d: any) => 
-                `[Source: ${d.title}]\n${d.content.substring(0, 4000)}...` // Increase limit slightly
+        if (!error && relevantDocs && relevantDocs.length > 0) {
+            const contextText = relevantDocs.map((d: any) => 
+                `[Source: ${d.title}]\n${d.content.substring(0, 4000)}...`
             ).join("\n\n");
             
             knowledgeContext = `\n\n### EVIDENCED-BASED GUIDELINES (RAG)\nThe following medical guidelines are SPECIFIC to this condition (${c.trueDiagnosis}). Use these to accurately simulate symptoms, clinical course, and physical findings.\n${contextText}`;
