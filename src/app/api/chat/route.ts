@@ -79,12 +79,11 @@ export async function POST(req: Request) {
     // 3. Call OpenAI with JSON mode
     console.log('Calling OpenAI API with JSON mode...');
     const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-5-mini', 
       messages: conversation as any,
       response_format: { type: "json_object" },
       stream: false,
-      max_tokens: 1500, // Increased for detailed ultrasound responses
-      temperature: 0.7,
+      max_completion_tokens: 2000,
     });
 
     // 4. Parse JSON response and extract role
