@@ -32,17 +32,21 @@ export async function POST(req: Request) {
         console.error(error);
         // Fallback Mock result if API fails (e.g. no key)
         return NextResponse.json({
-            total_score: 15,
+            total_score: 24,
             dimensions: [
-                { key: "opqrst_hpi", score: 3, max: 5, feedback: "Missing Timeline details." },
-                { key: "red_flags", score: 3, max: 5, feedback: "Asked about numbness but missed fever." },
-                { key: "hypothesis", score: 3, max: 5, feedback: "Good ACL suspicion." },
-                { key: "communication", score: 4, max: 5, feedback: "Polite." },
-                { key: "summary_plan", score: 2, max: 5, feedback: "Summary was too brief." }
+                { key: "interview", label: "病歴（病状の把握）", score: 4, max: 6, comment: "主要な症状（OPQRST）は概ね聴取できていますが、既往歴の確認が不足しています。" },
+                { key: "exam", label: "身体診察", score: 3, max: 6, comment: "患部の観察は行えましたが、健側との比較や触診が省略されています。" },
+                { key: "communication", label: "コミュニケーション能力", score: 5, max: 6, comment: "丁寧な言葉遣いで、患者への配慮が感じられました。" },
+                { key: "judgment", label: "臨床判断", score: 4, max: 6, comment: "得られた情報から適切な鑑別疾患を挙げられています。" },
+                { key: "professionalism", label: "プロフェッショナリズム", score: 4, max: 6, comment: "真摯な態度で接することができています。" },
+                { key: "management", label: "マネジメント", score: 4, max: 6, comment: "時間配分は適切でした。" }
             ],
-            strengths: ["Polite tone"],
-            improvements: ["Dig deeper into history"],
-            next_questions: ["Did you hear a pop?"],
+            detailed_feedback: {
+                good_points: "・患者の訴えに共感的な態度で接することができていました。\n・痛みの詳細について詳しく聞くことができました。",
+                improvements: "・「他に気になることはありますか？」といった開放的な質問が欲しかったです。\n・レッドフラッグ（危険な兆候）の確認をより意識しましょう。",
+                next_steps: "・次回は、必ず「健側比較」を行うようにしましょう。\n・鑑別診断の幅を広げるために、周辺部位の情報を聞き出しましょう。",
+                patient_voice: "「先生が優しく話聞いてくれたので安心しました。ただ、もう少し詳しく足を見てほしかったです。」"
+            },
             rationale_links: []
         });
     }
