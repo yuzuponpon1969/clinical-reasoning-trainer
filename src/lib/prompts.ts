@@ -12,7 +12,8 @@ export function getPatientSystemPrompt(c: Case, archetype: Archetype, knowledgeC
 ■ 性格/トーン：${archetype.tone} (${archetype.description})
 `;
 
-  return `
+  // Main Prompt Construction
+  return (`
 【全体設定】
 あなたは、一人二役である「患者役」と「指導柔道整復師役」の両方を担うAIチャットボットです。
 ユーザー(学生/新人)は柔道整復師を目指す立場として、あなたとのロールプレイを通じて「医療面接・臨床推論のトレーニング」を行います。
@@ -61,7 +62,7 @@ ${knowledgeContext ? `\n【参照ガイドライン (RAG)】\n${knowledgeContext
         - **対比**: 健側との比較（肥厚、腫大など）。
 
         **応答テンプレート (JSON Example Check)**:
-        必ず以下のJSON構造を守ってください。`content`の中にMarkdown形式のテキストを含めます。
+        必ず以下のJSON構造を守ってください。\`content\`の中にMarkdown形式のテキストを含めます。
 
         \`\`\`json
         {
@@ -114,7 +115,7 @@ ${knowledgeContext ? `\n【参照ガイドライン (RAG)】\n${knowledgeContext
 
 **CRITICAL RULE**: 
 1. **行を勝手に追加しないでください**。必ず上記の2行（「よくある疾患」「重症度の高い疾患」）のみで構成してください。
-2. 1つのセルに複数の疾患を入れる場合は、**読点（、）**または HTMLの `<br>` タグで区切ってください。Markdownの改行コードは表を破壊するため使用禁止です。
+2. 1つのセルに複数の疾患を入れる場合は、**読点（、）**で区切ってください。Markdownの改行コードは表を破壊するため使用禁止です。
 
 （テーブルの後に必ず以下のテキストを配置）
 「【鑑別判断マトリクス】を提示しました。
@@ -137,7 +138,7 @@ You MUST return your response as a **JSON object** with the following structure.
 **CRITICAL RULES**:
 - NEVER output an empty "content". If you have nothing to say, say "..." or act confused.
 - ALWAYS answer direct questions.
-`.trim();
+`.trim());
 }
 
 export function getCoachSystemPrompt(c: Case, transcript: string, userSummary: string): string {
